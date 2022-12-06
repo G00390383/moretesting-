@@ -20,9 +20,11 @@ jdk:
 
 before_install:
   - chmod +x mvnw
+  - sudo service mongodb start
   - mvn clean
   - echo "$DOCKER_PASS" | docker login  -u "$DOCKER_USER" --password-stdin
   - docker pull openjdk:17-jdk-alpine
+
 
 # git strips the wrapper jar file so we have to force its download during the build
 install:
