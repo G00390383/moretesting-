@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   testingproj-container:
-    image: testingproj
+    image: testingproj:0.0.1-SNAPSHOT
     build:
       context: ./
       dockerfile: Dockerfile
