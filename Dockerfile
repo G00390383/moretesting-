@@ -11,10 +11,10 @@ VOLUME /tmp
 EXPOSE 8081
 
 # The application's jar file
-ARG JAR_FILE=target/testingproj-latest.jar
+ARG JAR_FILE=target/testingproj-0.0.1-SNAPSHOT.jar
 
 # Add the application's jar to the container
-ADD ${JAR_FILE} testingproj-latest.jar
+ADD ${JAR_FILE} testingproj-0.0.1-SNAPSHOT.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/testingproj-latest.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/testingproj-0.0.1-SNAPSHOT.jar"]
